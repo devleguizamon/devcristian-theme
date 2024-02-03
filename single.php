@@ -1,7 +1,19 @@
-<?php
-
-/* 
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
- */
-
+<?php get_header(); ?>
+<main class="wrap">
+  <section class="content-area content-full-width">
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <article class="article-full">
+        <header>
+          <h2><?php the_title(); ?></h2>
+          By: <?php the_author(); ?>
+        </header>
+       <?php the_content(); ?>
+      </article>
+<?php endwhile; else : ?>
+      <article>
+        <p>Sorry, no post was found!</p>
+      </article>
+<?php endif; ?>
+  </section>
+</main>
+<?php get_footer(); ?>
