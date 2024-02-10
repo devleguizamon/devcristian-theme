@@ -81,3 +81,7 @@ function devcristian_theme_support(){
 }
 
 add_action( 'after_setup_theme', 'devcristian_theme_support' );
+
+//Theme config instance
+require_once get_template_directory() . '/includes/theme-config.php';
+TH_SETUP()->setup();

@@ -1,0 +1,9 @@
+.owl-item.active .box-job{
+    border: 1px solid #478b6f;
+}
+.owl-item.active:first-child .box-job{
+    border: 1px solid #66c69d !important;
+}
+.owl-item.active:last-child .box-job{
+    border: 1px solid #32604f !important;
+}
